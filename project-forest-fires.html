@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algerian Forest Fires Prediction | Krish Bhardwaj</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="project-page">
+
+    <a href="index.html#projects" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+
+    <!-- Hero -->
+    <div class="project-hero">
+        <div class="project-hero-bg">
+            <img src="assets/images/ml_graph_6.png" alt="ROC Curves - Algerian Forest Fires Prediction">
+        </div>
+        <div class="project-hero-content">
+            <span class="project-hero-tag">Machine Learning</span>
+            <h1>Algerian Forest Fires <span class="accent">Prediction</span></h1>
+            <div class="project-hero-meta">
+                <span><i class="fas fa-university"></i> SIT Pune — Under Dr. Satish Kumar V.C.</span>
+                <span><i class="fas fa-calendar"></i> Academic Project</span>
+                <span><i class="fas fa-users"></i> Team of 4</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="project-content">
+
+        <!-- Overview -->
+        <div class="project-section">
+            <h2>Project <span class="accent">Overview</span></h2>
+            <p>
+                This project applies <strong>Machine Learning classification techniques</strong> to predict 
+                whether a forest fire will occur in the Algerian region based on meteorological and 
+                environmental features. The dataset contains observations from two Algerian regions 
+                (Bejaia and Sidi Bel-Abbes) with weather-based Fire Weather Index (FWI) system components.
+            </p>
+            <p>
+                We implemented and compared multiple classification models, ultimately building a 
+                <strong>Stacking Ensemble Classifier</strong> that combines the strengths of Logistic Regression, 
+                Support Vector Machine (SVM), and Random Forest to achieve state-of-the-art prediction performance.
+            </p>
+
+            <div class="project-tech-tags">
+                <span>Python</span>
+                <span>Scikit-Learn</span>
+                <span>Pandas</span>
+                <span>NumPy</span>
+                <span>Matplotlib</span>
+                <span>Seaborn</span>
+                <span>Logistic Regression</span>
+                <span>SVM</span>
+                <span>Random Forest</span>
+                <span>Stacking Ensemble</span>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div class="project-section">
+            <h2>Key <span class="accent">Results</span></h2>
+            <div class="project-metrics">
+                <div class="metric-card">
+                    <span class="metric-value">97.96%</span>
+                    <span class="metric-label">Accuracy</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value">98.25%</span>
+                    <span class="metric-label">F1 Score</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value">1.000</span>
+                    <span class="metric-label">ROC-AUC</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value">4</span>
+                    <span class="metric-label">Models Compared</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dataset -->
+        <div class="project-section">
+            <h2>Dataset &amp; <span class="accent">Features</span></h2>
+            <p>
+                The Algerian Forest Fires dataset includes 244 instances with observations from June to September 2012, 
+                collected from two regions in northern Algeria. Each instance contains:
+            </p>
+            <table class="project-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Description</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Temperature</td><td>Noon temperature in Celsius (22–42°C)</td><td>Continuous</td></tr>
+                    <tr><td>RH</td><td>Relative humidity in % (21–90%)</td><td>Continuous</td></tr>
+                    <tr><td>Ws</td><td>Wind speed in km/h (6–29)</td><td>Continuous</td></tr>
+                    <tr><td>Rain</td><td>Daily rainfall in mm (0–16.8)</td><td>Continuous</td></tr>
+                    <tr><td>FFMC</td><td>Fine Fuel Moisture Code (28.6–92.5)</td><td>FWI Component</td></tr>
+                    <tr><td>DMC</td><td>Duff Moisture Code (1.1–65.9)</td><td>FWI Component</td></tr>
+                    <tr><td>DC</td><td>Drought Code (7–220.4)</td><td>FWI Component</td></tr>
+                    <tr><td>ISI</td><td>Initial Spread Index (0–18.5)</td><td>FWI Component</td></tr>
+                    <tr><td>BUI</td><td>Buildup Index (1.1–68)</td><td>FWI Component</td></tr>
+                    <tr><td>FWI</td><td>Fire Weather Index (0–31.1)</td><td>FWI Component</td></tr>
+                    <tr><td>Classes</td><td>Fire / Not Fire</td><td>Target (Binary)</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- EDA -->
+        <div class="project-section">
+            <h2>Exploratory <span class="accent">Data Analysis</span></h2>
+            <p>
+                Extensive EDA was performed to understand feature distributions, correlations, and class separability. 
+                The correlation heatmap reveals strong positive correlations between temperature, FFMC, ISI, and FWI — 
+                which are key predictors of fire occurrence. Humidity (RH) shows a strong negative correlation with fire risk.
+            </p>
+            <div class="project-img-grid single">
+                <img src="assets/images/ml_graph_3.png" alt="Correlation heatmap showing feature relationships">
+            </div>
+        </div>
+
+        <!-- Models -->
+        <div class="project-section">
+            <h2>Model <span class="accent">Architecture</span></h2>
+
+            <h3>Base Models</h3>
+            <p>Three base classifiers were individually trained and evaluated:</p>
+            <ul>
+                <li><strong>Logistic Regression</strong> — A linear classifier using the sigmoid function. Effective as a baseline and interpretable model.</li>
+                <li><strong>Support Vector Machine (SVM)</strong> — Uses a radial basis function (RBF) kernel to find an optimal hyperplane in high-dimensional space for non-linear classification.</li>
+                <li><strong>Random Forest</strong> — An ensemble of decision trees using bagging. Provides strong individual performance and feature importance rankings.</li>
+            </ul>
+
+            <h3>Stacking Ensemble (Final Model)</h3>
+            <p>
+                The stacking ensemble uses all three base models as Level-0 learners. Their predictions are fed 
+                as features to a <strong>Logistic Regression meta-learner</strong> (Level-1), which learns the optimal 
+                combination of base model predictions. This architecture captures both linear and non-linear 
+                patterns in the data.
+            </p>
+            <p>
+                Cross-validation was used during stacking to prevent data leakage — base model predictions 
+                for the meta-learner are generated out-of-fold.
+            </p>
+        </div>
+
+        <!-- Results Visualization -->
+        <div class="project-section">
+            <h2>Results <span class="accent">Visualization</span></h2>
+
+            <h3>Model Performance Comparison</h3>
+            <div class="project-img-grid single">
+                <img src="assets/images/ml_graph_7.png" alt="Model performance comparison bar chart">
+            </div>
+
+            <h3>Confusion Matrix — Stacking Ensemble</h3>
+            <p>
+                The confusion matrix shows near-perfect classification with minimal false positives 
+                and false negatives. Only 1 misclassification out of 49 test samples.
+            </p>
+            <div class="project-img-grid single">
+                <img src="assets/images/ml_graph_5.png" alt="Confusion matrix for stacking ensemble">
+            </div>
+
+            <h3>ROC Curves — All Models</h3>
+            <p>
+                All models achieve excellent ROC-AUC scores, with the Stacking Ensemble reaching 
+                a perfect AUC of 1.000, indicating complete separability between fire and non-fire classes.
+            </p>
+            <div class="project-img-grid single">
+                <img src="assets/images/ml_graph_6.png" alt="ROC curves for all models">
+            </div>
+        </div>
+
+        <!-- Detailed Results -->
+        <div class="project-section">
+            <h2>Detailed <span class="accent">Comparison</span></h2>
+            <table class="project-table">
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Accuracy</th>
+                        <th>Precision</th>
+                        <th>Recall</th>
+                        <th>F1 Score</th>
+                        <th>ROC-AUC</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Logistic Regression</td>
+                        <td>95.92%</td>
+                        <td>96.30%</td>
+                        <td>96.30%</td>
+                        <td>96.30%</td>
+                        <td>0.998</td>
+                    </tr>
+                    <tr>
+                        <td>SVM (RBF)</td>
+                        <td>95.92%</td>
+                        <td>96.43%</td>
+                        <td>96.43%</td>
+                        <td>96.43%</td>
+                        <td>0.999</td>
+                    </tr>
+                    <tr>
+                        <td>Random Forest</td>
+                        <td>97.96%</td>
+                        <td>96.55%</td>
+                        <td>100%</td>
+                        <td>98.25%</td>
+                        <td>1.000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Stacking Ensemble</strong></td>
+                        <td><strong>97.96%</strong></td>
+                        <td><strong>96.55%</strong></td>
+                        <td><strong>100%</strong></td>
+                        <td><strong>98.25%</strong></td>
+                        <td><strong>1.000</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Team -->
+        <div class="project-section">
+            <h2>Team &amp; <span class="accent">Supervision</span></h2>
+            <p>
+                This project was completed as part of the Machine Learning coursework at 
+                <strong>Symbiosis Institute of Technology, Pune</strong>, under the guidance of 
+                <strong>Dr. Satish Kumar V.C.</strong>
+            </p>
+            <table class="project-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>PRN</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Krish Bhardwaj</td><td>24070127060</td></tr>
+                    <tr><td>Harsh Acharya</td><td>—</td></tr>
+                    <tr><td>Karan Joshi</td><td>—</td></tr>
+                    <tr><td>Harshit Varma</td><td>—</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Key Takeaways -->
+        <div class="project-section">
+            <h2>Key <span class="accent">Takeaways</span></h2>
+            <ul>
+                <li>End-to-end ML pipeline: data cleaning, EDA, feature engineering, model training, evaluation</li>
+                <li>Implementing and comparing multiple classification algorithms</li>
+                <li>Stacking ensemble architecture for improved generalization</li>
+                <li>Cross-validation to prevent overfitting and data leakage</li>
+                <li>Comprehensive model evaluation using accuracy, precision, recall, F1, and ROC-AUC</li>
+                <li>Data visualization for communicating insights</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

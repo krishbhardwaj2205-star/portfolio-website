@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATLAB Control System Analysis | Krish Bhardwaj</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="project-page">
+
+    <a href="index.html#projects" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+
+    <!-- Hero -->
+    <div class="project-hero">
+        <div class="project-hero-bg">
+            <img src="assets/images/matlab_case1_bode.png" alt="Bode Plot - MATLAB Control Systems">
+        </div>
+        <div class="project-hero-content">
+            <span class="project-hero-tag">Control Systems</span>
+            <h1>MATLAB Control System <span class="accent">Analysis</span></h1>
+            <div class="project-hero-meta">
+                <span><i class="fas fa-university"></i> SIT Pune — Robotics &amp; Control Systems</span>
+                <span><i class="fas fa-calendar"></i> Academic Project (RCS CA2)</span>
+                <span><i class="fas fa-code"></i> MATLAB / Control Systems Toolbox</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="project-content">
+
+        <!-- Overview -->
+        <div class="project-section">
+            <h2>Project <span class="accent">Overview</span></h2>
+            <p>
+                This project performs comprehensive <strong>time-domain and frequency-domain analysis</strong> of 
+                DC motor control systems used in three industrial applications: a small robotic arm joint, 
+                a conveyor belt drive, and a heavy-duty robot. For each application, both 
+                <strong>armature-controlled</strong> and <strong>field-controlled</strong> DC motor configurations 
+                are analyzed — resulting in 6 complete case studies.
+            </p>
+            <p>
+                Each case study includes transfer function derivation, pole-zero mapping, step response analysis 
+                (rise time, settling time, overshoot), Bode plots, and stability margin evaluation (gain margin, 
+                phase margin). The analysis uses MATLAB's Control Systems Toolbox.
+            </p>
+
+            <div class="project-tech-tags">
+                <span>MATLAB</span>
+                <span>Control Systems Toolbox</span>
+                <span>Transfer Functions</span>
+                <span>Bode Plots</span>
+                <span>Step Response</span>
+                <span>Pole-Zero Maps</span>
+                <span>Stability Analysis</span>
+                <span>Gain &amp; Phase Margin</span>
+            </div>
+        </div>
+
+        <!-- Key Metrics -->
+        <div class="project-section">
+            <h2>Project <span class="accent">Scope</span></h2>
+            <div class="project-metrics">
+                <div class="metric-card">
+                    <span class="metric-value">6</span>
+                    <span class="metric-label">Case Studies</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value">3</span>
+                    <span class="metric-label">Applications</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value">18</span>
+                    <span class="metric-label">Plots Generated</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value">2</span>
+                    <span class="metric-label">Motor Types</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Case Study Summary -->
+        <div class="project-section">
+            <h2>Case Study <span class="accent">Summary</span></h2>
+            <table class="project-table">
+                <thead>
+                    <tr>
+                        <th>Case</th>
+                        <th>Application</th>
+                        <th>Motor Type</th>
+                        <th>Transfer Function G(s)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Case 1</td>
+                        <td>Small Robotic Arm Joint</td>
+                        <td>Armature Controlled</td>
+                        <td>0.2 / (0.001s³ + 0.012s² + 0.02s + 0.04)</td>
+                    </tr>
+                    <tr>
+                        <td>Case 2</td>
+                        <td>Small Robotic Arm Joint</td>
+                        <td>Field Controlled</td>
+                        <td>0.2 / (0.001s³ + 0.012s² + 0.02s)</td>
+                    </tr>
+                    <tr>
+                        <td>Case 3</td>
+                        <td>Conveyor Belt</td>
+                        <td>Armature Controlled</td>
+                        <td>0.8 / (0.025s³ + 0.15s² + 0.2s + 0.64)</td>
+                    </tr>
+                    <tr>
+                        <td>Case 4</td>
+                        <td>Conveyor Belt</td>
+                        <td>Field Controlled</td>
+                        <td>0.8 / (0.025s³ + 0.3s² + 0.5s)</td>
+                    </tr>
+                    <tr>
+                        <td>Case 5</td>
+                        <td>Heavy Duty Robot</td>
+                        <td>Armature Controlled</td>
+                        <td>1.2 / (0.02s³ + 0.3s² + 0.8s + 1.44)</td>
+                    </tr>
+                    <tr>
+                        <td>Case 6</td>
+                        <td>Heavy Duty Robot</td>
+                        <td>Field Controlled</td>
+                        <td>1.2 / (0.02s³ + 0.23s² + 0.3s)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Case 1 & 2: Robotic Arm -->
+        <div class="project-section">
+            <h2>Small Robotic Arm <span class="accent">Joint</span></h2>
+            <p>
+                A small robotic arm joint requires precise angular position control with minimal overshoot 
+                and fast settling time. The armature-controlled variant (Case 1) provides direct torque control 
+                through armature current manipulation, while the field-controlled variant (Case 2) offers 
+                smoother but slower response through field flux adjustment.
+            </p>
+
+            <h3>Case 1 — Armature Controlled: Step Response</h3>
+            <div class="project-img-full">
+                <img src="assets/images/matlab_case1_step.png" alt="Step response - Robotic arm armature controlled DC motor">
+            </div>
+
+            <h3>Case 1 — Armature Controlled: Bode Plot</h3>
+            <div class="project-img-full">
+                <img src="assets/images/matlab_case1_bode.png" alt="Bode plot - Robotic arm armature controlled">
+            </div>
+
+            <h3>Case 1 — Pole-Zero Map</h3>
+            <div class="project-img-full">
+                <img src="assets/images/matlab_case1_pzmap.png" alt="Pole-zero map - Case 1">
+            </div>
+
+            <h3>Case 2 — Field Controlled: Step Response</h3>
+            <div class="project-img-full">
+                <img src="assets/images/matlab_case2_step.png" alt="Step response - Robotic arm field controlled DC motor">
+            </div>
+
+            <h3>Case 2 — Field Controlled: Bode Plot</h3>
+            <div class="project-img-full">
+                <img src="assets/images/matlab_case2_bode.png" alt="Bode plot - Robotic arm field controlled">
+            </div>
+
+            <h3>Case 2 — Pole-Zero Map</h3>
+            <div class="project-img-full">
+                <img src="assets/images/matlab_case2_pzmap.png" alt="Pole-zero map - Case 2">
+            </div>
+        </div>
+
+        <!-- Case 3 & 4: Conveyor Belt -->
+        <div class="project-section">
+            <h2>Conveyor Belt <span class="accent">Drive</span></h2>
+            <p>
+                Conveyor belt systems require constant speed control under varying load conditions. 
+                The higher numerator gain (0.8) reflects the motor's higher torque requirement compared 
+                to the robotic arm. The field-controlled variant shows the characteristic zero at the origin 
+                (integrator), indicating type-1 system behavior for steady-state error elimination.
+            </p>
+
+            <h3>Case 3 — Armature Controlled: Step Response</h3>
+            <div class="project-img-full">
+                <img src="assets/images/matlab_case3_step.png" alt="Step response - Conveyor belt armature controlled">
+            </div>
+
+            <h3>Case 3 — Bode Plot</h3>
+            <div class="project-img-full">
+                <img src="assets/images/matlab_case3_bode.png" alt="Bode plot - Conveyor belt armature controlled">
+            </div>
+
+            <h3>Case 4 — Field Controlled: Step Response</h3>
+            <div class="project-img-full">
+                <img src="assets/images/matlab_case4_step.png" alt="Step response - Conveyor belt field controlled">
+            </div>
+
+            <h3>Case 4 — Bode Plot</h3>
+            <div class="project-img-full">
+                <img src="assets/images/matlab_case4_bode.png" alt="Bode plot - Conveyor belt field controlled">
+            </div>
+        </div>
+
+        <!-- Case 5 & 6: Heavy Duty Robot -->
+        <div class="project-section">
+            <h2>Heavy Duty <span class="accent">Robot</span></h2>
+            <p>
+                Heavy-duty robots demand high torque and robust stability under large inertial loads. 
+                The motor gain is 1.2, the highest among all three applications. The armature-controlled 
+                variant (Case 5) uses modified denominator coefficients for stability, while the 
+                field-controlled variant (Case 6) again shows type-1 system behavior with the integrator pole.
+            </p>
+
+            <h3>Case 5 — Armature Controlled: Step Response</h3>
+            <div class="project-img-full">
+                <img src="assets/images/matlab_case5_step.png" alt="Step response - Heavy duty robot armature controlled">
+            </div>
+
+            <h3>Case 5 — Bode Plot</h3>
+            <div class="project-img-full">
+                <img src="assets/images/matlab_case5_bode.png" alt="Bode plot - Heavy duty robot armature controlled">
+            </div>
+
+            <h3>Case 6 — Field Controlled: Step Response</h3>
+            <div class="project-img-full">
+                <img src="assets/images/matlab_case6_step.png" alt="Step response - Heavy duty robot field controlled">
+            </div>
+
+            <h3>Case 6 — Bode Plot</h3>
+            <div class="project-img-full">
+                <img src="assets/images/matlab_case6_bode.png" alt="Bode plot - Heavy duty robot field controlled">
+            </div>
+        </div>
+
+        <!-- Analysis Methodology -->
+        <div class="project-section">
+            <h2>Analysis <span class="accent">Methodology</span></h2>
+            <p>For each case study, the following systematic analysis was performed:</p>
+
+            <h3>1. Pole-Zero Mapping</h3>
+            <p>
+                Poles and zeros of the open-loop transfer function are plotted on the s-plane to determine 
+                system stability (all poles in left half-plane → stable) and transient behavior 
+                (complex poles → oscillatory, real poles → exponential).
+            </p>
+
+            <h3>2. Step Response Analysis</h3>
+            <p>
+                The unit step response is computed for the closed-loop system (unity feedback where applicable) 
+                to extract time-domain specifications:
+            </p>
+            <ul>
+                <li><strong>Rise Time</strong> — Time to reach 10% to 90% of final value</li>
+                <li><strong>Settling Time</strong> — Time to stay within ±2% of final value</li>
+                <li><strong>Peak Overshoot</strong> — Maximum percentage above the steady-state value</li>
+                <li><strong>Peak Time</strong> — Time to first reach the peak value</li>
+            </ul>
+
+            <h3>3. Bode Plot &amp; Stability Margins</h3>
+            <p>
+                Bode magnitude and phase plots are generated for the open-loop transfer function. 
+                Stability margins are extracted:
+            </p>
+            <ul>
+                <li><strong>Gain Margin (GM)</strong> — How much the gain can increase before instability (measured in dB at the phase crossover frequency)</li>
+                <li><strong>Phase Margin (PM)</strong> — How much additional phase lag the system can tolerate (measured in degrees at the gain crossover frequency)</li>
+            </ul>
+        </div>
+
+        <!-- Key Takeaways -->
+        <div class="project-section">
+            <h2>Key <span class="accent">Takeaways</span></h2>
+            <ul>
+                <li>Armature-controlled motors provide faster transient response and are preferred for position control applications (robotic joints)</li>
+                <li>Field-controlled motors inherently have a pole at the origin (integrator), eliminating steady-state error for step inputs</li>
+                <li>Higher motor gain increases both speed of response and risk of instability — requiring careful stability margin analysis</li>
+                <li>Bode plot analysis provides a systematic method for evaluating relative stability without computing closed-loop poles</li>
+                <li>Unity feedback systems may require lead/lag compensators when stability margins are inadequate</li>
+                <li>MATLAB's Control Systems Toolbox enables rapid prototyping and comparison of control strategies</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

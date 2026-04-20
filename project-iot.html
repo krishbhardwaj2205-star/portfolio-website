@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino &amp; IoT Sensor Systems | Krish Bhardwaj</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="project-page.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="project-page">
+
+    <a href="index.html#projects" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
+
+    <!-- Hero -->
+    <div class="project-hero">
+        <div class="project-hero-bg">
+            <img src="assets/images/iot_combined.png" alt="IoT Temperature & Humidity Data">
+        </div>
+        <div class="project-hero-content">
+            <span class="project-hero-tag">IoT / Embedded Systems</span>
+            <h1>Arduino &amp; IoT <span class="accent">Sensor Systems</span></h1>
+            <div class="project-hero-meta">
+                <span><i class="fas fa-university"></i> SIT Pune — Academic Project</span>
+                <span><i class="fas fa-globe"></i> <a href="https://thingspeak.mathworks.com/channels/3060088" target="_blank" style="color:var(--accent);">Live Data on ThingSpeak</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="project-content">
+
+        <!-- Overview -->
+        <div class="project-section">
+            <h2>Project <span class="accent">Overview</span></h2>
+            <p>
+                This project demonstrates the design and implementation of IoT-enabled sensor systems using 
+                <strong>Arduino</strong>, <strong>ESP-32</strong>, and various sensors for real-time environmental 
+                monitoring. Sensor data is collected, processed by the microcontroller, and transmitted to the 
+                <strong>ThingSpeak</strong> cloud platform for live visualization, analysis, and alerting.
+            </p>
+            <p>
+                The system monitors temperature and humidity using a DHT11 sensor, with data uploaded to 
+                ThingSpeak Channel #3060088 at regular intervals. Additional experiments involved ultrasonic 
+                distance sensors, infrared (IR) sensors, and Raspberry Pi integration for edge processing.
+            </p>
+
+            <div class="project-tech-tags">
+                <span>Arduino</span>
+                <span>ESP-32</span>
+                <span>DHT11</span>
+                <span>Ultrasonic Sensor</span>
+                <span>IR Sensor</span>
+                <span>Raspberry Pi</span>
+                <span>ThingSpeak</span>
+                <span>Wi-Fi (IEEE 802.11)</span>
+                <span>MQTT</span>
+                <span>C/C++</span>
+            </div>
+        </div>
+
+        <!-- Key Metrics -->
+        <div class="project-section">
+            <h2>Key <span class="accent">Metrics</span></h2>
+            <div class="project-metrics">
+                <div class="metric-card">
+                    <span class="metric-value">5+</span>
+                    <span class="metric-label">Sensors Used</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value">56</span>
+                    <span class="metric-label">Data Points Logged</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value">2</span>
+                    <span class="metric-label">Channels Monitored</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-value">Real-time</span>
+                    <span class="metric-label">Cloud Upload</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- System Architecture -->
+        <div class="project-section">
+            <h2>System <span class="accent">Architecture</span></h2>
+            <p>The IoT system follows a three-tier architecture:</p>
+
+            <h3>1. Sensor Layer (Edge Devices)</h3>
+            <ul>
+                <li><strong>DHT11</strong> — Digital temperature and humidity sensor. Measures temperature (0–50°C, ±2°C accuracy) and relative humidity (20–80%, ±5% accuracy).</li>
+                <li><strong>HC-SR04 Ultrasonic Sensor</strong> — Measures distance (2–400 cm) using time-of-flight of ultrasonic pulses. Used for proximity detection and level monitoring.</li>
+                <li><strong>IR Sensor</strong> — Infrared obstacle detection for short-range proximity sensing and object counting.</li>
+            </ul>
+
+            <h3>2. Processing Layer (Microcontrollers)</h3>
+            <ul>
+                <li><strong>Arduino Uno</strong> — Primary microcontroller for sensor interfacing, ADC conversion, and serial communication.</li>
+                <li><strong>ESP-32</strong> — Wi-Fi-enabled microcontroller that reads sensor data and transmits it to ThingSpeak via HTTP API over Wi-Fi.</li>
+                <li><strong>Raspberry Pi</strong> — Used for edge computing tasks, data logging, and local visualization.</li>
+            </ul>
+
+            <h3>3. Cloud Layer (ThingSpeak)</h3>
+            <ul>
+                <li>Data uploaded via ThingSpeak REST API every 15 seconds</li>
+                <li>Two fields: Field 1 (Humidity %), Field 2 (Temperature °C)</li>
+                <li>Built-in MATLAB visualization for trend analysis</li>
+                <li>Public channel for remote monitoring: <a href="https://thingspeak.mathworks.com/channels/3060088" target="_blank" style="color:var(--accent);">Channel #3060088</a></li>
+            </ul>
+        </div>
+
+        <!-- Live Data -->
+        <div class="project-section">
+            <h2>Live <span class="accent">Sensor Data</span></h2>
+            <p>
+                The following graphs show real sensor data captured from the DHT11 sensor and uploaded to 
+                ThingSpeak. The temperature readings hover around 22–24°C (indoor environment), while humidity 
+                varies between 5–30% based on ambient conditions.
+            </p>
+
+            <h3>Temperature Over Time</h3>
+            <div class="project-img-full">
+                <img src="assets/images/iot_temperature.png" alt="Temperature readings from DHT sensor over time">
+            </div>
+
+            <h3>Humidity Over Time</h3>
+            <div class="project-img-full">
+                <img src="assets/images/iot_humidity.png" alt="Humidity readings from DHT sensor over time">
+            </div>
+
+            <h3>Combined Temperature &amp; Humidity</h3>
+            <div class="project-img-full">
+                <img src="assets/images/iot_combined.png" alt="Dual-axis plot of temperature and humidity">
+            </div>
+        </div>
+
+        <!-- ThingSpeak Live Embed -->
+        <div class="project-section">
+            <h2>ThingSpeak <span class="accent">Live Charts</span></h2>
+            <p>
+                Below are the live charts directly embedded from the ThingSpeak channel. These update in real-time 
+                when the sensor system is active.
+            </p>
+            <div class="project-img-grid">
+                <iframe width="100%" height="280" style="border: 1px solid var(--border-color); border-radius: 8px;" 
+                    src="https://thingspeak.mathworks.com/channels/3060088/charts/1?bgcolor=%23111118&color=%2300f0ff&dynamic=true&results=60&type=line&update=15"></iframe>
+                <iframe width="100%" height="280" style="border: 1px solid var(--border-color); border-radius: 8px;" 
+                    src="https://thingspeak.mathworks.com/channels/3060088/charts/2?bgcolor=%23111118&color=%23ff6b6b&dynamic=true&results=60&type=line&update=15"></iframe>
+            </div>
+        </div>
+
+        <!-- Code Overview -->
+        <div class="project-section">
+            <h2>Code <span class="accent">Overview</span></h2>
+            <p>The ESP-32 firmware follows this flow:</p>
+            <ol>
+                <li>Initialize Wi-Fi connection and connect to local network</li>
+                <li>Initialize DHT11 sensor on a digital GPIO pin</li>
+                <li>In the main loop: read temperature and humidity values</li>
+                <li>Validate readings (discard NaN or out-of-range values)</li>
+                <li>Construct HTTP GET request with API key and field values</li>
+                <li>Send data to ThingSpeak API endpoint</li>
+                <li>Wait 15 seconds (ThingSpeak free tier rate limit) and repeat</li>
+            </ol>
+            <p>
+                Additional experiments included an ultrasonic distance sensor connected to Arduino for 
+                obstacle distance measurement, and IR sensors for object counting in a simulated conveyor setup.
+            </p>
+        </div>
+
+        <!-- Key Takeaways -->
+        <div class="project-section">
+            <h2>Key <span class="accent">Takeaways</span></h2>
+            <ul>
+                <li>Hands-on experience with multiple sensor types (temperature, humidity, ultrasonic, IR)</li>
+                <li>Microcontroller programming in C/C++ (Arduino IDE)</li>
+                <li>Wi-Fi communication and REST API integration</li>
+                <li>Cloud-based IoT data logging and visualization</li>
+                <li>Understanding of IoT architecture: edge → gateway → cloud</li>
+                <li>Real-time data monitoring and threshold-based alerting</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
